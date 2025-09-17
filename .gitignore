@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+dp-env/
+.env
+
+# Data files - users should download from Kaggle
+breach_report.csv
+
+# IDE
+.vscode/
+.idea/
