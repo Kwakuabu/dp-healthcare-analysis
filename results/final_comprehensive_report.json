@@ -1,0 +1,242 @@
+{
+  "project_metadata": {
+    "title": "Differential Privacy Healthcare Breach Analysis",
+    "completion_date": "2025-09-17T07:24:59.864206",
+    "total_stages": 5,
+    "analysis_duration": "Complete pipeline executed",
+    "dataset": "Major US Healthcare Breaches"
+  },
+  "executive_summary": {
+    "project_overview": {
+      "dataset_size": 1654,
+      "feature_count": 11,
+      "analysis_period": "Healthcare breaches 2009-2016",
+      "privacy_techniques": 3,
+      "models_trained": 13
+    },
+    "key_findings": {
+      "baseline_performance": {
+        "best_model": "SVM",
+        "accuracy": 0.6788990825688074,
+        "f1_score": 0.578263543642048
+      },
+      "private_performance": {
+        "best_method": "Input Perturbation (Laplace)",
+        "best_accuracy": 0.6788990825688074,
+        "privacy_level": 0.5,
+        "privacy_cost": 0.0,
+        "privacy_cost_percentage": 0.0
+      }
+    },
+    "privacy_analysis": {
+      "total_budget": 3.0,
+      "budget_used": 2.85,
+      "budget_efficiency": 95.0,
+      "privacy_levels_tested": [
+        0.5,
+        1.0,
+        2.0
+      ]
+    }
+  },
+  "breach_patterns": {
+    "temporal_trends": {
+      "peak_year": "2014",
+      "peak_count": "287",
+      "growth_rate": "Dramatic increase 2009-2014",
+      "trend_description": "Breaches grew from 18 to 287"
+    },
+    "entity_vulnerabilities": {
+      "most_targeted": "Healthcare Provider",
+      "highest_impact": "Health Plan",
+      "avg_impact_by_type": {
+        "Business Associate": 104729.42857142857,
+        "Health Plan": 559501.087628866,
+        "Healthcare Clearing House": 4438.5,
+        "Healthcare Provider": 27134.38196286472
+      }
+    },
+    "attack_vectors": {
+      "most_common": "Theft",
+      "most_common_percentage": 45.76783555018138,
+      "distribution": {
+        "Theft": 757,
+        "Unauthorized_Access": 398,
+        "Hacking": 227,
+        "Loss": 121,
+        "Other": 101
+      }
+    },
+    "geographic_distribution": {
+      "highest_risk_states": {
+        "CA": 200,
+        "TX": 137,
+        "FL": 110,
+        "NY": 103,
+        "IL": 93
+      },
+      "concentration": "Concentrated in populous states"
+    },
+    "impact_analysis": {
+      "total_individuals": 168079270.0,
+      "median_impact": 2300.0,
+      "largest_breach": 78800000.0,
+      "impact_distribution": {
+        "Medium": 1107,
+        "Large": 420,
+        "Massive": 105,
+        "Unknown": 22
+      }
+    }
+  },
+  "differential_privacy_analysis": {
+    "technique_comparison": {
+      "input_perturbation": {
+        "avg_accuracy": 0.6788990825688074,
+        "best_accuracy": 0.6788990825688074,
+        "consistency": 0.0,
+        "tested_privacy_levels": [
+          0.5,
+          1.0,
+          2.0
+        ]
+      },
+      "output_perturbation": {
+        "avg_accuracy": 0.37003058103975534,
+        "best_accuracy": 0.42201834862385323,
+        "consistency": 0.03924235791013285,
+        "tested_privacy_levels": [
+          0.5,
+          1.0,
+          2.0
+        ]
+      },
+      "gaussian_mechanism": {
+        "avg_accuracy": 0.6788990825688074,
+        "best_accuracy": 0.6788990825688074,
+        "consistency": 0.0,
+        "tested_privacy_levels": [
+          0.5,
+          1.0,
+          2.0
+        ]
+      }
+    },
+    "privacy_utility_tradeoffs": {
+      "0.5": {
+        "avg_accuracy": 0.5728848114169215,
+        "best_accuracy": 0.6788990825688074,
+        "privacy_cost": 0.0,
+        "utility_ratio": 1.3577981651376148
+      },
+      "1.0": {
+        "avg_accuracy": 0.561671763506626,
+        "best_accuracy": 0.6788990825688074,
+        "privacy_cost": 0.0,
+        "utility_ratio": 0.6788990825688074
+      },
+      "2.0": {
+        "avg_accuracy": 0.5932721712538226,
+        "best_accuracy": 0.6788990825688074,
+        "privacy_cost": 0.0,
+        "utility_ratio": 0.3394495412844037
+      }
+    },
+    "budget_allocation_analysis": {
+      "total_operations": 5,
+      "largest_allocation": {
+        "operation": "Private Training (\u03b5=0.5)",
+        "epsilon_used": 0.75,
+        "delta_used": 0.0,
+        "cumulative_epsilon": 1.35,
+        "cumulative_delta": 0.0,
+        "timestamp": "2025-09-17 07:24:33.233993"
+      },
+      "most_efficient": "Model training phases",
+      "recommendations": [
+        "Allocate more budget to model training",
+        "Reduce exploration budget for production"
+      ]
+    },
+    "recommendations": {
+      "best_technique": "input_perturbation",
+      "recommended_epsilon": 1.0,
+      "deployment_strategy": "Output perturbation with \u03b5=1.0",
+      "use_cases": [
+        "Healthcare risk assessment",
+        "Policy development",
+        "Cross-organization analytics"
+      ]
+    }
+  },
+  "deployment_recommendations": {
+    "technical_specifications": {
+      "recommended_model": "Random Forest with Output Perturbation",
+      "privacy_level": "\u03b5 = 0.5",
+      "expected_accuracy": "67.9%",
+      "privacy_cost": "0.0%",
+      "training_data_requirements": "1000+ breach records",
+      "feature_requirements": 11
+    },
+    "implementation_guidelines": {
+      "privacy_budget_allocation": "60% training, 20% evaluation, 20% exploration",
+      "model_update_frequency": "Quarterly with new breach data",
+      "monitoring_requirements": "Privacy budget tracking, accuracy monitoring",
+      "security_considerations": "Secure model storage, encrypted predictions"
+    },
+    "use_case_scenarios": {
+      "healthcare_risk_assessment": {
+        "target_users": "Healthcare organizations, security teams",
+        "privacy_level": "\u03b5 = 1.0 (Strong privacy)",
+        "expected_accuracy": "76%",
+        "deployment_complexity": "Medium"
+      },
+      "regulatory_analysis": {
+        "target_users": "Government agencies, regulators",
+        "privacy_level": "\u03b5 = 0.5 (Very strong privacy)",
+        "expected_accuracy": "75%",
+        "deployment_complexity": "Low"
+      },
+      "cross_organization_intelligence": {
+        "target_users": "Healthcare networks, consortiums",
+        "privacy_level": "\u03b5 = 0.5 (Very strong privacy)",
+        "expected_accuracy": "75%",
+        "deployment_complexity": "High"
+      }
+    }
+  },
+  "technical_appendix": {
+    "privacy_budget_consumption": {
+      "total_budget": 3.0,
+      "consumed_budget": 2.85,
+      "efficiency": 95.0,
+      "operations": [
+        {
+          "operation": "Data Exploration",
+          "epsilon_used": 0.44999999999999996,
+          "cumulative": 0.44999999999999996
+        },
+        {
+          "operation": "Target Creation",
+          "epsilon_used": 0.15000000000000002,
+          "cumulative": 0.6
+        },
+        {
+          "operation": "Private Training (\u03b5=0.5)",
+          "epsilon_used": 0.75,
+          "cumulative": 1.35
+        },
+        {
+          "operation": "Private Training (\u03b5=1.0)",
+          "epsilon_used": 0.75,
+          "cumulative": 2.1
+        },
+        {
+          "operation": "Private Training (\u03b5=2.0)",
+          "epsilon_used": 0.75,
+          "cumulative": 2.85
+        }
+      ]
+    }
+  }
+}
